@@ -1,37 +1,11 @@
 import React, { useState } from 'react'
 import './App.css'
+import Button from './components/Button'
+import List from './components/List'
+import Donelist from './components/Donelist'
 <link rel="preconnect" href="https://fonts.googleapis.com"></link>
 
-function List(props) {
-  if (props.list.isDone == false) {
-    return (
-      <div className='list-form'>
-        <div className='block-style'>{props.list.title}</div>
-        <div>{props.list.value}</div>
-        <div className='button-style'>
-          <button onClick={() => props.deletButton(props.list.id)}>삭제하기</button>
-          <button onClick={() => props.changeButton(props.list.id)}>완료</button>
-          </div>
-      </div>
 
-    )
-  }
-}
-
-function Donelist(props) {
-  if (props.list.isDone == true) {
-    return (
-      <div className='done-form'>
-        <div className='block-style'>{props.list.title}</div>
-        <div>{props.list.value}</div>
-        <div className='button-style'>
-          <button onClick={() => props.deletButton(props.list.id)}>삭제하기</button>
-          <button onClick={() => props.changeButton(props.list.id)}>취소</button>
-        </div>
-      </div>
-    )
-  }
-}
 
 const App= () => {
   //working배열
@@ -107,14 +81,14 @@ const App= () => {
           </div>
         </div>
         <div className='input-form'>
-          <div>
+          <div>w
             제목<input value={name} onChange={nameChangeHandler} />
           </div>
           <div>
             내용<input value={value} onChange={valueChangeHandler} />
           </div>
           <div className='add-button'>
-            <button onClick={addButtonHandler}>추가하기</button>
+            <Button addButtonHandler={addButtonHandler}>추가하기</Button>
           </div>
         </div>
         <div className='working'>
