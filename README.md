@@ -1,4 +1,4 @@
-component 정리ㅇ
+component 정리
 
 버튼 컴포넌트
 
